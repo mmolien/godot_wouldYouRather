@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="Script" uid="uid://c65niyst5g33" path="res://main.gd" id="1_ig7tw"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ig7tw")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1150.0
+offset_bottom = 649.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 647.0
+alignment = 1
+
+[node name="Title" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "Would You Rather: Monster's Gamble!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Desc" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "You are presented with a difficult choice..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TXT_PROMPT" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "Choose who you fight."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="BTN_GIANT" type="Button" parent="Control/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Fight Giant"
+
+[node name="BTN_SWARM" type="Button" parent="Control/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Fight Swarm"
+
+[node name="Result" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BTN_RETRY" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "Play Again!"
+
+[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/BTN_GIANT" to="." method="_on_btn_giant_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/BTN_SWARM" to="." method="_on_btn_swarm_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/BTN_RETRY" to="." method="_on_btn_retry_pressed"]

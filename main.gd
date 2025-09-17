@@ -10,7 +10,7 @@ extends Node
 @onready var health_monster = $Control/VBoxContainer/HEALTH_MONSTER
 
 # Creature stats (using a Dictionary for demonstration)
-var giant_creature = {"health": 250, 	"attack": 30 	}
+var giant_creature = {"health": 100, 	"attack": 15 	}
 var small_creature = {"health": 5, 		"attack": 1 	}
 var player_default = {"health": 100, 	"attack": 15 	}
 
